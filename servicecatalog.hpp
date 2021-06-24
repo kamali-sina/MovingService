@@ -1,22 +1,13 @@
-#ifndef #SERVICE_CATALOG_HPP
+#ifndef SERVICE_CATALOG_HPP
 #define SERVICE_CATALOG_HPP
 
-class servicecatalog
+class ServiceCatalog
 {
 private:
     /* data */
 public:
-    servicecatalog(/* args */);
-    ~servicecatalog();
+    ServiceCatalog(/* args */);
 };
-
-servicecatalog::servicecatalog(/* args */)
-{
-}
-
-servicecatalog::~servicecatalog()
-{
-}
 
 
 #endif // SERVICE_CATALOG_HPP

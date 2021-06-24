@@ -1,10 +1,10 @@
 #include "taskhandler.hpp"
 
-TaskTandler::TaskTandler(/* args */)
+TaskHandler::TaskHandler(/* args */)
 {
 }
 
-void TaskTandler::makeNewTask(int TaskID)
+void TaskHandler::makeNewTask(int TaskID)
 {
     tasks_.push_back(Task(TaskID));
 }

@@ -4,6 +4,8 @@
 #include "user.hpp"
 #include "orderhandler.hpp"
 #include "taskhandler.hpp"
+#include "servicecatalog.hpp"
+#include "servicedescription.hpp"
 
 class Initializer
 {

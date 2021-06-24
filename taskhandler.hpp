@@ -4,13 +4,13 @@
 #include <vector>
 #include "task.hpp"
 
-class TaskTandler
+class TaskHandler
 {
 private:
     /* data */
     std::vector<Task> tasks_;
 public:
-    TaskTandler(/* args */);
+    TaskHandler(/* args */);
     void makeNewTask(int taskID);
 };
 

@@ -4,10 +4,10 @@ Initializer::Initializer()
 {
     User user(0, "John", "Doe");
     OrderHandler orderhandler();
-    TaskTandler taskhandler();
+    TaskHandler taskhandler();
 }
 
 int main()
 {
-    Initializer Initializer;
+    Initializer initializer;
 }
