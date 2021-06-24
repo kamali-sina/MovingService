@@ -1,22 +1,17 @@
 #ifndef TASK_HANDLER_HPP
 #define TASK_HANDLER_HPP
 
-class taskhandler
+#include <vector>
+#include "task.hpp"
+
+class TaskTandler
 {
 private:
     /* data */
+    std::vector<Task> tasks_;
 public:
-    taskhandler(/* args */);
-    ~taskhandler();
+    TaskTandler(/* args */);
+    void makeNewTask(int taskID);
 };
-
-taskhandler::taskhandler(/* args */)
-{
-}
-
-taskhandler::~taskhandler()
-{
-}
-
 
 #endif // TASK_HANDLER_HPP
