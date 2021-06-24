@@ -7,7 +7,7 @@
 #include "orderlineservice.hpp"
 #include "payment.hpp"
 
-enum Status {NotCompleted, Completed};
+// enum Status {NotCompleted, Completed};
 
 class Order
 {
@@ -15,11 +15,11 @@ private:
     int orderID_;
     Date order_date_;
     Status order_status_;
-    std::vector<OrderLineService> lines_;
+    OrderLineService line_;
 public:
-    Order(int orderID, Date order_date);
+    Order(int orderID, Date order_date, OrderLineService line);
     double getTotal();
-    void startTransaction();
+    std::string getString();
 };
 
 #endif // ORDER_HPP

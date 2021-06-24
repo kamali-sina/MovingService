@@ -1,23 +1,20 @@
 #include "order.hpp"
+#include <string>
 
-Order::Order(int orderID, Date order_date)
+using namespace std;
+
+Order::Order(int orderID, Date order_date, OrderLineService line) : order_date_(order_date), line_(line)
 {
     orderID_ = orderID;
-    order_date_ = order_date;
 }
 
 double Order::getTotal()
 {
-    double total = 0;
-    for (OrderLineService line : lines_)
-    {
-        total += line.getSubtotal();
-    }
-    return total;
+    return line_.getSubtotal();
 }
 
-void Order::startTransaction()
-{
-    Payment payment;
-    payment.requestInformation();
+std::string Order::getString(){
+    string output = "";
+    output += to_string(orderID_) + " | " + order_date_.getString() + line_.getString();
+    return output;
 }
