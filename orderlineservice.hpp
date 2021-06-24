@@ -1,22 +1,22 @@
 #ifndef ORDER_LINE_SERVICE_HPP
 #define ORDER_LINE_SERVICE_HPP
 
-class orderlineservice
+#include <vector>
+
+#include "service.hpp"
+
+class OrderLineService
 {
 private:
-    /* data */
+    int quantity_;
+    std::vector<Service> services_;
 public:
-    orderlineservice(/* args */);
-    ~orderlineservice();
+    OrderLineService();
+    void addService(Service service); //TODO
+    double getSubtotal();
+
 };
 
-orderlineservice::orderlineservice(/* args */)
-{
-}
-
-orderlineservice::~orderlineservice()
-{
-}
 
 
 #endif // ORDER_LINE_SERVICE_HPP
