@@ -1,22 +1,20 @@
 #ifndef USER_HPP
 #define USER_HPP
 
-class user
+#include <string>
+
+class User
 {
 private:
     /* data */
+    int userID_;
+    std::string password_;
+
 public:
-    user(/* args */);
-    ~user();
+    std::string username_;
+    User(int userID, std::string username, std::string password);
+
 };
-
-user::user(/* args */)
-{
-}
-
-user::~user()
-{
-}
 
 
 #endif // USER_HPP
