@@ -11,10 +11,11 @@ private:
     double amount_;
     bool is_transaction_completed = false;
 public:
-    Payment(/* args */);
+    Payment();
+    void startTransaction(double total);
     void requestInformation();
     void verifyInformation();
-    void endTransaction();
+    void endTransaction(double total);
 };
 
 #endif // PAYMENT_HPP

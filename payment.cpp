@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Payment::Payment(/* args */)
+Payment::Payment()
 {
 }
 
@@ -23,7 +23,14 @@ void Payment::verifyInformation()
     cout << "Information Verified" << endl;
 }
 
-void Payment::endTransaction()
+void Payment::endTransaction(double total)
 {
+    cout<<total<<" was deducted from your account."<<endl;
     is_transaction_completed = true;
+}
+
+void Payment::startTransaction(double total){
+    requestInformation();
+    verifyInformation();
+    endTransaction(total);
 }
