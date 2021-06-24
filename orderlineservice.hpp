@@ -2,8 +2,10 @@
 #define ORDER_LINE_SERVICE_HPP
 
 #include <vector>
+#include <string>
 
 #include "service.hpp"
+#include "date.hpp"
 
 class OrderLineService
 {
@@ -12,9 +14,9 @@ private:
     std::vector<Service> services_;
 public:
     OrderLineService();
-    void addService(Service service); //TODO
+    void addService(std::string options, Date date, TaskHandler &taskHandler);
     double getSubtotal();
-
+    std::string getString();
 };
 
 
