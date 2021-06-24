@@ -1,22 +1,25 @@
 #ifndef SERVICE_DESCRIPTION
 #define SERVICE_DESCRIPTION
 
-class servicedescription
+#include <string>
+
+#define MOVINGPRICE 200.00
+#define MOVINGOPTIONS "Inspector | Vehicle | MovingTeam | Packing | Warehouse"
+
+enum ServiceDType {MovingService, StoringService, PackagingService};
+
+class ServiceDescription
 {
 private:
     /* data */
+    ServiceDType type_;
+    double price_;
+    std::string options_;
 public:
-    servicedescription(/* args */);
-    ~servicedescription();
+    ServiceDescription(ServiceDType type);
+    std::string getOptions();
+    ServiceDType getType();
 };
-
-servicedescription::servicedescription(/* args */)
-{
-}
-
-servicedescription::~servicedescription()
-{
-}
 
 
 #endif // SERVICE_DESCRIPTION
