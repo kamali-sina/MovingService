@@ -2,6 +2,8 @@
 #define TASK_HANDLER_HPP
 
 #include <vector>
+#include <string>
+
 #include "task.hpp"
 
 class TaskHandler
@@ -9,9 +11,10 @@ class TaskHandler
 private:
     /* data */
     std::vector<Task> tasks_;
+    int id_counter_=0;
 public:
     TaskHandler(/* args */);
-    void makeNewTask(int taskID);
+    void makeNewTask(std::string description);
 };
 
 #endif // TASK_HANDLER_HPP
