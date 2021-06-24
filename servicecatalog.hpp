@@ -1,12 +1,18 @@
 #ifndef SERVICE_CATALOG_HPP
 #define SERVICE_CATALOG_HPP
 
+#include <vector>
+#include <string>
+
+#include "servicedescription.hpp"
+
 class ServiceCatalog
 {
 private:
-    /* data */
+    std::vector<ServiceDescription> services_;
 public:
-    ServiceCatalog(/* args */);
+    ServiceCatalog();
+    std::string getMovingOptions();
 };
 
 
