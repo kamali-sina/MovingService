@@ -1,15 +1,25 @@
 #include "service.hpp"
+#include <string>
 
-Service::Service(int serviceID, ServiceType type, std::string description, double price, Status status)
+using namespace std;
+
+Service::Service(std::string options, Date date, TaskHandler &taskHandler) : date_(date)
 {
-    serviceID_ = serviceID;
-    type_ = type; 
-    description_ = description; 
-    price_ = price; 
-    status_ = status; 
+    serviceID_ = 0;
+    type_ = Moving; 
+    description_ = options; 
+    price_ = 200.00; 
+    status_ = NotCompleted;
+    taskHandler.makeNewTask(description_);
 }
 
 double Service::getPrice()
 {
     return price_;
+}
+
+std::string Service::getString(){
+    string output = "";
+    output += "MovingService " + description_ + " " + to_string(price_);
+    return output;
 }
