@@ -1,22 +1,17 @@
-#ifndef #ORDER_HANDLER_HPP
+#ifndef ORDER_HANDLER_HPP
 #define ORDER_HANDLER_HPP
 
-class orderhandler
+#include <vector>
+#include "order.hpp"
+#include "date.hpp"
+
+class OrderHandler
 {
 private:
-    /* data */
+    std::vector<Order> orders_;
 public:
-    orderhandler(/* args */);
-    ~orderhandler();
+    OrderHandler(/* args */);
+    void makeNewOrder(int userID, Date date);
 };
-
-orderhandler::orderhandler(/* args */)
-{
-}
-
-orderhandler::~orderhandler()
-{
-}
-
 
 #endif // ORDER_HANDLER_HPP
