@@ -1,22 +1,20 @@
 #ifndef PAYMENT_HPP
 #define PAYMENT_HPP
 
-class payment
+#include <iostream>
+#include <string>
+
+class Payment
 {
 private:
     /* data */
+    double amount_;
+    bool is_transaction_completed = false;
 public:
-    payment(/* args */);
-    ~payment();
+    Payment(/* args */);
+    void requestInformation();
+    void verifyInformation();
+    void endTransaction();
 };
-
-payment::payment(/* args */)
-{
-}
-
-payment::~payment()
-{
-}
-
 
 #endif // PAYMENT_HPP
