@@ -1,22 +1,14 @@
 #ifndef TASK_HPP
 #define TASK_HPP
 
-class task
+class Task
 {
 private:
     /* data */
+    int taskID_;
+
 public:
-    task(/* args */);
-    ~task();
+    Task(int taskID);
 };
-
-task::task(/* args */)
-{
-}
-
-task::~task()
-{
-}
-
 
 #endif // TASK_HPP
